@@ -1,6 +1,5 @@
 const topics = {
 
-```
 tawhid: {
     title: "তাওহীদ ও আকীদাহ",
     description: "তাওহীদ, ঈমান, শিরক ও ইসলামী আকীদাহ সম্পর্কিত বিষয়সমূহ।",
@@ -216,7 +215,6 @@ questions: {
 
     ]
 }
-```
 
 };
 
@@ -239,7 +237,6 @@ document.querySelectorAll(".topic-filter");
 
 function renderContent(type = "all") {
 
-```
 contentElement.innerHTML = "";
 
 if (!topic) {
@@ -293,13 +290,11 @@ filteredContent.forEach(function(item) {
     contentElement.appendChild(article);
 
 });
-```
 
 }
 
 if (topic) {
 
-```
 document.title =
     topic.title + " | Maktab Al Hidayah";
 
@@ -314,7 +309,6 @@ renderContent();
 
 } else {
 
-```
 titleElement.textContent =
     "বিষয় পাওয়া যায়নি";
 
@@ -334,13 +328,11 @@ contentElement.innerHTML = `
         </a>
     </article>
 `;
-```
 
 }
 
 filterButtons.forEach(function(button) {
 
-```
 button.addEventListener("click", function() {
 
     filterButtons.forEach(function(btn) {
@@ -355,6 +347,5 @@ button.addEventListener("click", function() {
     renderContent(selectedType);
 
 });
-```
 
 });
