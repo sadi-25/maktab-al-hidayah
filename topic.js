@@ -1,3 +1,4 @@
+const topics = {
 tawhid: {
     title: "তাওহীদ ও আকীদাহ",
     description: "তাওহীদ, ঈমান, শিরক ও ইসলামী আকীদাহ সম্পর্কিত বিষয়সমূহ।",
@@ -292,3 +293,4 @@ button.addEventListener("click", function() {
         button.getAttribute("data-type");
 
     renderContent(selectedType);
+});
