@@ -1,4 +1,6 @@
 const topics = {
+
+```
 tawhid: {
     title: "তাওহীদ ও আকীদাহ",
     description: "তাওহীদ, ঈমান, শিরক ও ইসলামী আকীদাহ সম্পর্কিত বিষয়সমূহ।",
@@ -180,6 +182,7 @@ questions: {
         }
     ]
 }
+```
 
 };
 
@@ -192,20 +195,22 @@ const descriptionElement = document.getElementById("topicDescription");
 const contentElement = document.getElementById("topicContent");
 const filterButtons = document.querySelectorAll(".topic-filter");
 
-function renderContent(type = "all") {
+function renderContent(type) {
 
+```
 contentElement.innerHTML = "";
 
 if (!topic) {
     return;
 }
 
-const filteredContent =
-    type === "all"
-        ? topic.content
-        : topic.content.filter(function(item) {
-            return item.type === type;
-        });
+let filteredContent = topic.content;
+
+if (type && type !== "all") {
+    filteredContent = topic.content.filter(function(item) {
+        return item.type === type;
+    });
+}
 
 if (filteredContent.length === 0) {
 
@@ -228,15 +233,12 @@ filteredContent.forEach(function(item) {
         '<span class="content-type">' +
         item.type +
         '</span>' +
-
         '<h3>' +
         item.title +
         '</h3>' +
-
         '<p>' +
         item.description +
         '</p>' +
-
         '<a href="' +
         item.link +
         '">' +
@@ -246,11 +248,13 @@ filteredContent.forEach(function(item) {
     contentElement.appendChild(article);
 
 });
+```
 
 }
 
 if (topic) {
 
+```
 document.title =
     topic.title + " | Maktab Al Hidayah";
 
@@ -260,10 +264,12 @@ titleElement.textContent =
 descriptionElement.textContent =
     topic.description;
 
-renderContent();
+renderContent("all");
+```
 
 } else {
 
+```
 titleElement.textContent =
     "বিষয় পাওয়া যায়নি";
 
@@ -276,11 +282,13 @@ contentElement.innerHTML =
     '<p>অনুগ্রহ করে বিষয়সমূহের পেজ থেকে একটি বিষয় নির্বাচন করুন।</p>' +
     '<a href="topics.html">বিষয়সমূহ দেখুন →</a>' +
     '</article>';
+```
 
 }
 
 filterButtons.forEach(function(button) {
 
+```
 button.addEventListener("click", function() {
 
     filterButtons.forEach(function(btn) {
@@ -293,4 +301,8 @@ button.addEventListener("click", function() {
         button.getAttribute("data-type");
 
     renderContent(selectedType);
+
+});
+```
+
 });
