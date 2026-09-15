@@ -6,9 +6,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+```
 <title>বই | Maktab Al Hidayah</title>
 
 <link rel="stylesheet" href="style.css">
+```
 
 </head>
 
@@ -16,6 +18,7 @@
 
 <header>
 
+```
 <h1>Maktab Al Hidayah</h1>
 
 <p>কুরআন ও সহিহ সুন্নাহর আলোকে ইসলামের শিক্ষা</p>
@@ -30,11 +33,13 @@
     <a href="articles.html">প্রবন্ধ</a>
     <a href="about.html">আমাদের সম্পর্কে</a>
 </nav>
+```
 
 </header>
 
 <main>
 
+```
 <section class="page-header">
 
     <h2>বই</h2>
@@ -46,35 +51,64 @@
 </section>
 
 
-<!-- Category Filters -->
+<!-- Search -->
 
 <section>
 
-    <h2>বিষয় অনুযায়ী বই</h2>
+    <div class="book-search">
+
+        <input
+            type="search"
+            id="bookSearch"
+            placeholder="বই বা লেখকের নাম লিখে খুঁজুন..."
+            aria-label="বই খুঁজুন">
+
+    </div>
+
+</section>
+
+
+<!-- Filters -->
+
+<section>
+
+    <h2>বিষয় অনুযায়ী</h2>
 
     <div class="topic-filters">
 
-        <button class="topic-filter active" data-category="all">
+        <button
+            class="topic-filter active"
+            data-category="all">
             সব
         </button>
 
-        <button class="topic-filter" data-category="তাওহীদ ও আকীদাহ">
+        <button
+            class="topic-filter"
+            data-category="তাওহীদ ও আকীদাহ">
             তাওহীদ ও আকীদাহ
         </button>
 
-        <button class="topic-filter" data-category="কুরআন">
+        <button
+            class="topic-filter"
+            data-category="কুরআন">
             কুরআন
         </button>
 
-        <button class="topic-filter" data-category="রাসূল ﷺ ও সুন্নাহ">
+        <button
+            class="topic-filter"
+            data-category="রাসূল ﷺ ও সুন্নাহ">
             রাসূল ﷺ ও সুন্নাহ
         </button>
 
-        <button class="topic-filter" data-category="ইবাদত">
+        <button
+            class="topic-filter"
+            data-category="ইবাদত">
             ইবাদত
         </button>
 
-        <button class="topic-filter" data-category="আখলাক ও জীবন">
+        <button
+            class="topic-filter"
+            data-category="আখলাক ও জীবন">
             আখলাক ও জীবন
         </button>
 
@@ -92,40 +126,84 @@
 
         <!-- Book 1 -->
 
-        <article class="card book-card"
-            data-category="তাওহীদ ও আকীদাহ">
+        <article
+            class="card book-card"
+            data-category="তাওহীদ ও আকীদাহ"
+            data-search="তাওহীদ তাওহিদ আকীদাহ আকিদা">
+
 
             <span class="content-type">
                 তাওহীদ ও আকীদাহ
             </span>
 
+
             <h3>
                 তাওহীদ
             </h3>
+
+
+            <p class="book-author">
+                লেখক: —
+            </p>
+
 
             <p>
                 তাওহীদ ও আকীদাহ সম্পর্কিত একটি বই।
             </p>
 
-            <a href="content/books/tawhid.pdf"
-               target="_blank">
-                বইটি পড়ুন →
-            </a>
+
+            <div class="book-actions">
+
+                <a
+                    href="content/books/tawhid.pdf"
+                    target="_blank">
+                    📖 পড়ুন
+                </a>
+
+
+                <a
+                    href="content/books/tawhid.pdf"
+                    download>
+                    ⬇️ Download
+                </a>
+
+            </div>
+
 
         </article>
 
 
-        <!-- ভবিষ্যতে নতুন বই এখানে যোগ হবে -->
+        <!-- ভবিষ্যতের বই এখানে যোগ হবে -->
 
 
     </div>
 
+
+    <!-- No Result -->
+
+    <div
+        id="noBooks"
+        class="card"
+        style="display:none;">
+
+        <h3>
+            কোনো বই পাওয়া যায়নি
+        </h3>
+
+        <p>
+            অন্য কোনো শব্দ দিয়ে খুঁজে দেখুন অথবা অন্য বিষয় নির্বাচন করুন।
+        </p>
+
+    </div>
+
 </section>
+```
 
 </main>
 
 <footer>
 
+```
 <h2>Maktab Al Hidayah</h2>
 
 <p>
@@ -135,10 +213,14 @@
 <p class="copyright">
     © 2026 Maktab Al Hidayah
 </p>
+```
 
 </footer>
 
 <script>
+
+const searchInput =
+    document.getElementById("bookSearch");
 
 const filterButtons =
     document.querySelectorAll(".topic-filter");
@@ -146,55 +228,118 @@ const filterButtons =
 const books =
     document.querySelectorAll(".book-card");
 
-
-filterButtons.forEach(function(button) {
-
-    button.addEventListener("click", function() {
+const noBooks =
+    document.getElementById("noBooks");
 
 
-        /* Active button */
-
-        filterButtons.forEach(function(btn) {
-
-            btn.classList.remove("active");
-
-        });
-
-        button.classList.add("active");
+let selectedCategory = "all";
 
 
-        /* Selected category */
+function filterBooks() {
+
+    const searchText =
+        searchInput.value
+        .toLowerCase()
+        .trim();
+
+
+    let visibleBooks = 0;
+
+
+    books.forEach(function(book) {
+
 
         const category =
-            button.getAttribute("data-category");
+            book.getAttribute("data-category");
 
 
-        /* Filter books */
-
-        books.forEach(function(book) {
-
-            const bookCategory =
-                book.getAttribute("data-category");
+        const searchableText =
+            book.getAttribute("data-search")
+            .toLowerCase();
 
 
-            if (
-                category === "all" ||
-                bookCategory === category
-            ) {
+        const categoryMatch =
+            selectedCategory === "all" ||
+            category === selectedCategory;
 
-                book.style.display = "";
 
-            } else {
+        const searchMatch =
+            searchableText.includes(searchText);
 
-                book.style.display = "none";
 
-            }
+        if (
+            categoryMatch &&
+            searchMatch
+        ) {
 
-        });
+            book.style.display = "";
+
+            visibleBooks++;
+
+        } else {
+
+            book.style.display = "none";
+
+        }
 
     });
 
+
+    if (visibleBooks === 0) {
+
+        noBooks.style.display = "block";
+
+    } else {
+
+        noBooks.style.display = "none";
+
+    }
+
+}
+
+
+/* Search */
+
+searchInput.addEventListener(
+    "input",
+    filterBooks
+);
+
+
+/* Category filter */
+
+filterButtons.forEach(function(button) {
+
+    button.addEventListener(
+        "click",
+        function() {
+
+
+            filterButtons.forEach(
+                function(btn) {
+
+                    btn.classList.remove("active");
+
+                }
+            );
+
+
+            button.classList.add("active");
+
+
+            selectedCategory =
+                button.getAttribute(
+                    "data-category"
+                );
+
+
+            filterBooks();
+
+        }
+    );
+
 });
+
 
 </script>
 
