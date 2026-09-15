@@ -1,6 +1,5 @@
 const topics = {
 
-```
 tawhid: {
     title: "তাওহীদ ও আকীদাহ",
     description: "তাওহীদ, ঈমান, শিরক ও ইসলামী আকীদাহ সম্পর্কিত বিষয়সমূহ।",
@@ -182,7 +181,6 @@ questions: {
         }
     ]
 }
-```
 
 };
 
@@ -197,7 +195,6 @@ const filterButtons = document.querySelectorAll(".topic-filter");
 
 function renderContent(type) {
 
-```
 contentElement.innerHTML = "";
 
 if (!topic) {
@@ -248,13 +245,11 @@ filteredContent.forEach(function(item) {
     contentElement.appendChild(article);
 
 });
-```
 
 }
 
 if (topic) {
 
-```
 document.title =
     topic.title + " | Maktab Al Hidayah";
 
@@ -265,11 +260,9 @@ descriptionElement.textContent =
     topic.description;
 
 renderContent("all");
-```
 
 } else {
 
-```
 titleElement.textContent =
     "বিষয় পাওয়া যায়নি";
 
@@ -282,13 +275,11 @@ contentElement.innerHTML =
     '<p>অনুগ্রহ করে বিষয়সমূহের পেজ থেকে একটি বিষয় নির্বাচন করুন।</p>' +
     '<a href="topics.html">বিষয়সমূহ দেখুন →</a>' +
     '</article>';
-```
 
 }
 
 filterButtons.forEach(function(button) {
 
-```
 button.addEventListener("click", function() {
 
     filterButtons.forEach(function(btn) {
@@ -303,6 +294,5 @@ button.addEventListener("click", function() {
     renderContent(selectedType);
 
 });
-```
 
 });
