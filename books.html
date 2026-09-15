@@ -51,11 +51,54 @@
 </section>
 
 
+<!-- Category Filters -->
+
 <section>
 
-    <div class="card-grid">
+    <h2>বিষয় অনুযায়ী বই</h2>
 
-        <article class="card">
+    <div class="topic-filters">
+
+        <button class="topic-filter active" data-category="all">
+            সব
+        </button>
+
+        <button class="topic-filter" data-category="তাওহীদ ও আকীদাহ">
+            তাওহীদ ও আকীদাহ
+        </button>
+
+        <button class="topic-filter" data-category="কুরআন">
+            কুরআন
+        </button>
+
+        <button class="topic-filter" data-category="রাসূল ﷺ ও সুন্নাহ">
+            রাসূল ﷺ ও সুন্নাহ
+        </button>
+
+        <button class="topic-filter" data-category="ইবাদত">
+            ইবাদত
+        </button>
+
+        <button class="topic-filter" data-category="আখলাক ও জীবন">
+            আখলাক ও জীবন
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- Books -->
+
+<section>
+
+    <div class="card-grid" id="booksGrid">
+
+
+        <!-- Book 1 -->
+
+        <article class="card book-card"
+            data-category="তাওহীদ ও আকীদাহ">
 
             <span class="content-type">
                 তাওহীদ ও আকীদাহ
@@ -69,11 +112,16 @@
                 তাওহীদ ও আকীদাহ সম্পর্কিত একটি বই।
             </p>
 
-            <a href="content/books/tawhid.pdf" target="_blank">
+            <a href="content/books/tawhid.pdf"
+               target="_blank">
                 বইটি পড়ুন →
             </a>
 
         </article>
+
+
+        <!-- ভবিষ্যতে নতুন বই এখানে যোগ হবে -->
+
 
     </div>
 
@@ -97,6 +145,66 @@
 ```
 
 </footer>
+
+<script>
+
+const filterButtons =
+    document.querySelectorAll(".topic-filter");
+
+const books =
+    document.querySelectorAll(".book-card");
+
+
+filterButtons.forEach(function(button) {
+
+    button.addEventListener("click", function() {
+
+
+        /* Active button */
+
+        filterButtons.forEach(function(btn) {
+
+            btn.classList.remove("active");
+
+        });
+
+        button.classList.add("active");
+
+
+        /* Selected category */
+
+        const category =
+            button.getAttribute("data-category");
+
+
+        /* Filter books */
+
+        books.forEach(function(book) {
+
+            const bookCategory =
+                book.getAttribute("data-category");
+
+
+            if (
+                category === "all" ||
+                bookCategory === category
+            ) {
+
+                book.style.display = "";
+
+            } else {
+
+                book.style.display = "none";
+
+            }
+
+        });
+
+    });
+
+});
+
+</script>
 
 </body>
 </html>
