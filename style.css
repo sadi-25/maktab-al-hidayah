@@ -781,3 +781,71 @@ footer .copyright {
     font-size: 13px;
     font-weight: 600;
 }
+/* Books Library */
+
+.book-search {
+margin: 10px 0 25px;
+}
+
+.book-search input {
+width: 100%;
+max-width: 650px;
+box-sizing: border-box;
+padding: 14px 16px;
+border: 1px solid #d8c9a3;
+border-radius: 8px;
+background: #fffdf7;
+color: #174d3b;
+font-family: inherit;
+font-size: 16px;
+outline: none;
+}
+
+.book-search input:focus {
+border-color: #174d3b;
+box-shadow: 0 0 0 2px rgba(23, 77, 59, 0.08);
+}
+
+.book-author {
+color: #666;
+font-size: 14px;
+margin-top: -4px;
+}
+
+.book-actions {
+display: flex;
+flex-wrap: wrap;
+gap: 10px;
+margin-top: 18px;
+}
+
+.book-actions a {
+display: inline-block;
+text-decoration: none;
+background: #174d3b;
+color: #fff;
+padding: 9px 14px;
+border-radius: 6px;
+font-size: 14px;
+transition: 0.2s ease;
+}
+
+.book-actions a:hover {
+opacity: 0.88;
+}
+
+.book-actions a:last-child {
+background: #a07b28;
+}
+
+@media (max-width: 600px) {
+
+.book-actions {
+    flex-direction: column;
+}
+
+.book-actions a {
+    text-align: center;
+}
+
+}
