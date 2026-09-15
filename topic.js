@@ -35,6 +35,7 @@ tawhid: {
     ]
 },
 
+
 islam: {
     title: "ইসলাম সম্পর্কে জানুন",
     description: "ইসলামের পরিচয়, ইসলামের পাঁচ স্তম্ভ এবং ইসলামের মৌলিক শিক্ষা।",
@@ -56,6 +57,7 @@ islam: {
     ]
 },
 
+
 quran: {
     title: "কুরআন",
     description: "কুরআনের পরিচয়, মর্যাদা, শিক্ষা ও হিদায়াত।",
@@ -73,17 +75,17 @@ quran: {
             type: "প্রবন্ধ",
             link: "#",
             linkText: "বিস্তারিত দেখুন →"
-        }
+        },
         {
-title: "পবিত্র কুরআন পাঠের মর্যাদা",
-description: "পবিত্র কুরআন পাঠের মর্যাদা ও গুরুত্ব সম্পর্কে আলোচনা।",
-type: "অডিও",
-link: "audio.html",
-linkText: "অডিও শুনুন →"
-}
-
+            title: "পবিত্র কুরআন পাঠের মর্যাদা",
+            description: "পবিত্র কুরআন পাঠের মর্যাদা ও গুরুত্ব সম্পর্কে আলোচনা।",
+            type: "অডিও",
+            link: "audio.html",
+            linkText: "অডিও শুনুন →"
+        }
     ]
 },
+
 
 sunnah: {
     title: "রাসূল ﷺ ও সুন্নাহ",
@@ -105,6 +107,7 @@ sunnah: {
         }
     ]
 },
+
 
 ibadah: {
     title: "ইবাদত",
@@ -134,6 +137,7 @@ ibadah: {
     ]
 },
 
+
 akhlaq: {
     title: "আখলাক ও জীবন",
     description: "উত্তম চরিত্র, পরিবার, সমাজ ও দৈনন্দিন জীবনের ইসলামী শিক্ষা।",
@@ -155,6 +159,7 @@ akhlaq: {
     ]
 },
 
+
 questions: {
     title: "প্রশ্ন ও সংশয়",
     description: "ইসলাম সম্পর্কে বিভিন্ন প্রশ্ন, ভুল ধারণা ও সংশয়ের উত্তর।",
@@ -168,6 +173,7 @@ questions: {
         }
     ]
 },
+
 
 "new-muslim": {
     title: "নও-মুসলিম",
@@ -192,30 +198,55 @@ questions: {
 
 };
 
-const urlParams = new URLSearchParams(window.location.search);
-const topicKey = urlParams.get("topic");
-const topic = topics[topicKey];
+const urlParams =
+new URLSearchParams(window.location.search);
 
-const titleElement = document.getElementById("topicTitle");
-const descriptionElement = document.getElementById("topicDescription");
-const contentElement = document.getElementById("topicContent");
-const filterButtons = document.querySelectorAll(".topic-filter");
+const topicKey =
+urlParams.get("topic");
+
+const topic =
+topics[topicKey];
+
+const titleElement =
+document.getElementById("topicTitle");
+
+const descriptionElement =
+document.getElementById("topicDescription");
+
+const contentElement =
+document.getElementById("topicContent");
+
+const filterButtons =
+document.querySelectorAll(".topic-filter");
 
 function renderContent(type) {
 
 contentElement.innerHTML = "";
 
+
 if (!topic) {
     return;
 }
 
-let filteredContent = topic.content;
 
-if (type && type !== "all") {
-    filteredContent = topic.content.filter(function(item) {
-        return item.type === type;
-    });
+let filteredContent =
+    topic.content;
+
+
+if (
+    type &&
+    type !== "all"
+) {
+
+    filteredContent =
+        topic.content.filter(function(item) {
+
+            return item.type === type;
+
+        });
+
 }
+
 
 if (filteredContent.length === 0) {
 
@@ -226,29 +257,39 @@ if (filteredContent.length === 0) {
         '</article>';
 
     return;
+
 }
+
 
 filteredContent.forEach(function(item) {
 
-    const article = document.createElement("article");
+    const article =
+        document.createElement("article");
 
-    article.className = "card";
+
+    article.className =
+        "card";
+
 
     article.innerHTML =
         '<span class="content-type">' +
         item.type +
         '</span>' +
+
         '<h3>' +
         item.title +
         '</h3>' +
+
         '<p>' +
         item.description +
         '</p>' +
+
         '<a href="' +
         item.link +
         '">' +
         item.linkText +
         '</a>';
+
 
     contentElement.appendChild(article);
 
@@ -259,13 +300,17 @@ filteredContent.forEach(function(item) {
 if (topic) {
 
 document.title =
-    topic.title + " | Maktab Al Hidayah";
+    topic.title +
+    " | Maktab Al Hidayah";
+
 
 titleElement.textContent =
     topic.title;
 
+
 descriptionElement.textContent =
     topic.description;
+
 
 renderContent("all");
 
@@ -274,8 +319,10 @@ renderContent("all");
 titleElement.textContent =
     "বিষয় পাওয়া যায়নি";
 
+
 descriptionElement.textContent =
-    "দুঃখিত, এই বিষয়টি এখনো যোগ করা হয়নি।";
+    "দুঃখিত, এই বিষয়টি এখনো যোগ করা হয়নি.";
+
 
 contentElement.innerHTML =
     '<article class="card">' +
@@ -290,14 +337,20 @@ filterButtons.forEach(function(button) {
 
 button.addEventListener("click", function() {
 
+
     filterButtons.forEach(function(btn) {
+
         btn.classList.remove("active");
+
     });
+
 
     button.classList.add("active");
 
+
     const selectedType =
         button.getAttribute("data-type");
+
 
     renderContent(selectedType);
 
