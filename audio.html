@@ -1,186 +1,139 @@
 <!DOCTYPE html>
-<html lang="bn">
-<head>
 
+<html lang="bn">
+
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>অডিও | Maktab Al Hidayah</title>
+```
+<title>অডিও | Maktab Al Hidayah</title>
 
-    <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css">
+```
 
 </head>
 
 <body>
 
+<header>
 
-<header class="site-header">
+```
+<h1>Maktab Al Hidayah</h1>
 
-    <div class="container header-inner">
+<p>কুরআন ও সহিহ সুন্নাহর আলোকে ইসলামের শিক্ষা</p>
 
-        <div class="logo">
-
-            <a href="index.html">
-
-                <span class="logo-arabic">
-                    مَكْتَبُ الْهِدَايَةِ
-                </span>
-
-                <span class="logo-name">
-                    Maktab Al Hidayah
-                </span>
-
-            </a>
-
-        </div>
-
-
-        <nav class="main-nav">
-
-            <a href="index.html">হোম</a>
-            <a href="topics.html">বিষয়সমূহ</a>
-            <a href="books.html">বই</a>
-            <a href="audio.html" class="active">অডিও</a>
-            <a href="videos.html">ভিডিও</a>
-            <a href="pamphlets.html">পামফ্লেট</a>
-            <a href="articles.html">আর্টিকেল</a>
-
-        </nav>
-
-    </div>
+<nav>
+    <a href="index.html">হোম</a>
+    <a href="topics.html">বিষয়সমূহ</a>
+    <a href="books.html">বই</a>
+    <a href="audio.html">অডিও</a>
+    <a href="videos.html">ভিডিও</a>
+    <a href="pamphlets.html">প্যামফ্লেট</a>
+    <a href="articles.html">প্রবন্ধ</a>
+    <a href="about.html">আমাদের সম্পর্কে</a>
+</nav>
+```
 
 </header>
 
-
 <main>
 
-    <section class="page-header">
+```
+<section class="page-header">
 
-        <div class="container">
+    <h2>অডিও</h2>
 
-            <p class="section-label">AUDIO</p>
+    <p>
+        ইসলামী আলোচনা, কুরআন ও বিভিন্ন শিক্ষামূলক অডিও।
+    </p>
 
-            <h1>অডিও</h1>
+</section>
 
-            <p>
-                ইসলামী আলোচনা, দারস ও শিক্ষামূলক অডিও
+
+<!-- Audio -->
+
+<section>
+
+    <div class="card-grid">
+
+
+        <!-- Audio 1 -->
+
+        <article
+            class="card audio-card"
+            data-category="কুরআন">
+
+            <span class="content-type">
+                কুরআন
+            </span>
+
+            <h3>
+                পবিত্র কুরআন পাঠের মর্যাদা
+            </h3>
+
+            <p class="book-author">
+                আলোচক: মুহাম্মাদ মর্তুজা ইবন আয়েশ মুহাম্মাদ
             </p>
 
-        </div>
-
-    </section>
-
-
-    <section class="content-section">
-
-        <div class="container">
-
-            <div class="card-grid">
+            <p>
+                পবিত্র কুরআন পাঠের মর্যাদা ও গুরুত্ব সম্পর্কে আলোচনা।
+            </p>
 
 
-                <!-- AUDIO -->
+            <audio controls preload="metadata">
 
-                <article class="content-card">
+                <source
+                    src="content/audio/bn_Pabitra_Kuraana_Pathera_Maryada.mp3"
+                    type="audio/mpeg">
 
-                    <div class="content-icon">
-                        🎧
-                    </div>
+                আপনার ব্রাউজার অডিও প্লে করতে পারে না।
 
-                    <span class="content-type">
-                        তাওহীদ ও আকীদাহ
-                    </span>
-
-                    <h3>
-                        তাওহীদের গুরুত্ব
-                    </h3>
-
-                    <p>
-                        তাওহীদের গুরুত্ব সম্পর্কে একটি সংক্ষিপ্ত আলোচনা।
-                    </p>
+            </audio>
 
 
-                    <audio controls class="audio-player">
+            <p class="audio-source">
+                প্রকাশক:
+                ইসলাম প্রচার ব্যুরো,
+                রাবওয়াহ, রিয়াদ
+            </p>
 
-                        <source
-                            src="content/audio/tawhid.mp3"
-                            type="audio/mpeg"
-                        >
-
-                        আপনার ব্রাউজার অডিও প্লেয়ার সমর্থন করে না।
-
-                    </audio>
-
-
-                    <div class="card-actions">
-
-                        <a
-                            href="content/audio/tawhid.mp3"
-                            download
-                            class="btn btn-secondary"
-                        >
-                            ↓ অডিও ডাউনলোড
-                        </a>
-
-                    </div>
-
-                </article>
+            <p class="audio-source">
+                উৎস:
+                <a
+                    href="https://islamhouse.com/bn/"
+                    target="_blank"
+                    rel="noopener">
+                    IslamHouse
+                </a>
+            </p>
 
 
-                <article class="content-card">
+        </article>
 
-                    <div class="content-icon">
-                        🎧
-                    </div>
-
-                    <span class="content-type">
-                        ইবাদত
-                    </span>
-
-                    <h3>
-                        সালাতের গুরুত্ব
-                    </h3>
-
-                    <p>
-                        সালাতের গুরুত্ব ও মর্যাদা সম্পর্কে আলোচনা।
-                    </p>
-
-                    <div class="card-actions">
-
-                        <a
-                            href="#"
-                            class="btn btn-primary disabled"
-                        >
-                            শীঘ্রই আসছে
-                        </a>
-
-                    </div>
-
-                </article>
-
-
-            </div>
-
-        </div>
-
-    </section>
-
-</main>
-
-
-<footer class="site-footer">
-
-    <div class="container">
-
-        <p>© 2026 Maktab Al Hidayah</p>
-
-        <p>
-            কুরআন ও সহীহ সুন্নাহর আলোকে ইসলামী জ্ঞান
-        </p>
 
     </div>
 
-</footer>
+</section>
+```
 
+</main>
+
+<footer>
+
+```
+<h2>Maktab Al Hidayah</h2>
+
+<p>
+    কুরআন ও সহিহ সুন্নাহর আলোকে ইসলামের শিক্ষা
+</p>
+
+<p class="copyright">
+    © 2026 Maktab Al Hidayah
+</p>
+```
+
+</footer>
 
 </body>
 </html>
