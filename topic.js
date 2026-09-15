@@ -1,6 +1,6 @@
 const topics = {
 
-
+```
 tawhid: {
     title: "তাওহীদ ও আকীদাহ",
     description: "তাওহীদ, ঈমান, শিরক ও ইসলামী আকীদাহ সম্পর্কিত বিষয়সমূহ।",
@@ -11,33 +11,36 @@ tawhid: {
             title: "সংক্ষিপ্ত আকীদা কোর্স",
             description: "প্রফেসর ড. আবু বকর মুহাম্মাদ যাকারিয়ার সংক্ষিপ্ত আকীদা কোর্স। মোট ১১টি পর্ব।",
             type: "ভিডিও",
-            link: "aqidah-course.html"
+            link: "aqidah-course.html",
+            linkText: "কোর্স দেখুন →"
         },
 
         {
             title: "তাওহীদ কী?",
             description: "তাওহীদের পরিচয়, গুরুত্ব এবং একজন মুসলিমের জীবনে এর প্রয়োজনীয়তা।",
             type: "প্রবন্ধ",
-            link: "#"
+            link: "#",
+            linkText: "বিস্তারিত দেখুন →"
         },
 
         {
             title: "তাওহীদের প্রকার",
             description: "তাওহীদের বিভিন্ন দিক ও এর সংক্ষিপ্ত পরিচয়।",
             type: "প্রবন্ধ",
-            link: "#"
+            link: "#",
+            linkText: "বিস্তারিত দেখুন →"
         },
 
         {
             title: "শিরক কী?",
             description: "শিরকের পরিচয় এবং কেন একজন মুসলিমকে শিরক থেকে বেঁচে থাকতে হবে।",
             type: "প্যামফ্লেট",
-            link: "#"
+            link: "#",
+            linkText: "প্যামফ্লেট দেখুন →"
         }
 
     ]
 },
-
 
 islam: {
     title: "ইসলাম সম্পর্কে জানুন",
@@ -49,19 +52,20 @@ islam: {
             title: "ইসলাম কী?",
             description: "ইসলামের মৌলিক পরিচয় ও এর উদ্দেশ্য।",
             type: "প্রবন্ধ",
-            link: "#"
+            link: "#",
+            linkText: "বিস্তারিত দেখুন →"
         },
 
         {
             title: "ইসলামের পাঁচ স্তম্ভ",
             description: "শাহাদাহ, সালাত, যাকাত, সাওম ও হজ।",
             type: "প্রবন্ধ",
-            link: "#"
+            link: "#",
+            linkText: "বিস্তারিত দেখুন →"
         }
 
     ]
 },
-
 
 quran: {
     title: "কুরআন",
@@ -73,19 +77,20 @@ quran: {
             title: "কুরআন কী?",
             description: "আল-কুরআনের পরিচয় ও মুসলিম জীবনে এর গুরুত্ব।",
             type: "প্রবন্ধ",
-            link: "#"
+            link: "#",
+            linkText: "বিস্তারিত দেখুন →"
         },
 
         {
             title: "কুরআন থেকে হিদায়াত",
             description: "কুরআনের শিক্ষা কীভাবে আমাদের জীবনে প্রয়োগ করা যায়।",
             type: "প্রবন্ধ",
-            link: "#"
+            link: "#",
+            linkText: "বিস্তারিত দেখুন →"
         }
 
     ]
 },
-
 
 sunnah: {
     title: "রাসূল ﷺ ও সুন্নাহ",
@@ -97,19 +102,20 @@ sunnah: {
             title: "রাসূল ﷺ-এর পরিচয়",
             description: "মুহাম্মাদ ﷺ-এর পরিচয় ও তাঁর রিসালাত।",
             type: "প্রবন্ধ",
-            link: "#"
+            link: "#",
+            linkText: "বিস্তারিত দেখুন →"
         },
 
         {
             title: "সুন্নাহ কী?",
             description: "সুন্নাহর অর্থ, গুরুত্ব এবং মুসলিম জীবনে এর অবস্থান।",
             type: "প্রবন্ধ",
-            link: "#"
+            link: "#",
+            linkText: "বিস্তারিত দেখুন →"
         }
 
     ]
 },
-
 
 ibadah: {
     title: "ইবাদত",
@@ -121,26 +127,28 @@ ibadah: {
             title: "সালাত",
             description: "সালাতের গুরুত্ব ও মুসলিম জীবনে এর অবস্থান।",
             type: "প্রবন্ধ",
-            link: "#"
+            link: "#",
+            linkText: "বিস্তারিত দেখুন →"
         },
 
         {
             title: "সাওম",
             description: "রোজার পরিচয়, উদ্দেশ্য ও শিক্ষা।",
             type: "প্রবন্ধ",
-            link: "#"
+            link: "#",
+            linkText: "বিস্তারিত দেখুন →"
         },
 
         {
             title: "দুআ ও যিকর",
             description: "দুআ ও যিকরের গুরুত্ব।",
             type: "অডিও",
-            link: "#"
+            link: "#",
+            linkText: "শুনুন →"
         }
 
     ]
 },
-
 
 akhlaq: {
     title: "আখলাক ও জীবন",
@@ -152,19 +160,20 @@ akhlaq: {
             title: "উত্তম চরিত্র",
             description: "ইসলামে উত্তম চরিত্রের গুরুত্ব।",
             type: "প্রবন্ধ",
-            link: "#"
+            link: "#",
+            linkText: "বিস্তারিত দেখুন →"
         },
 
         {
             title: "পরিবার ও ইসলাম",
             description: "পরিবারের প্রতি দায়িত্ব ও ইসলামী আদর্শ।",
             type: "প্রবন্ধ",
-            link: "#"
+            link: "#",
+            linkText: "বিস্তারিত দেখুন →"
         }
 
     ]
 },
-
 
 questions: {
     title: "প্রশ্ন ও সংশয়",
@@ -176,12 +185,12 @@ questions: {
             title: "ইসলাম সম্পর্কে সাধারণ প্রশ্ন",
             description: "ইসলাম নিয়ে মানুষের সাধারণ কিছু প্রশ্নের আলোচনা।",
             type: "প্রবন্ধ",
-            link: "#"
+            link: "#",
+            linkText: "বিস্তারিত দেখুন →"
         }
 
     ]
 },
-
 
 "new-muslim": {
     title: "নও-মুসলিম",
@@ -193,18 +202,21 @@ questions: {
             title: "ইসলাম গ্রহণের পর প্রথম করণীয়",
             description: "নতুন মুসলিমের জন্য প্রাথমিক কিছু নির্দেশনা।",
             type: "গাইড",
-            link: "#"
+            link: "#",
+            linkText: "গাইড দেখুন →"
         },
 
         {
             title: "সালাত শেখা",
             description: "নও-মুসলিমদের জন্য সালাত শেখার প্রাথমিক নির্দেশনা।",
             type: "গাইড",
-            link: "#"
+            link: "#",
+            linkText: "গাইড দেখুন →"
         }
 
     ]
 }
+```
 
 };
 
@@ -214,8 +226,7 @@ const topicKey = urlParams.get("topic");
 
 const topic = topics[topicKey];
 
-const titleElement =
-document.getElementById("topicTitle");
+const titleElement = document.getElementById("topicTitle");
 
 const descriptionElement =
 document.getElementById("topicDescription");
@@ -226,38 +237,69 @@ document.getElementById("topicContent");
 const filterButtons =
 document.querySelectorAll(".topic-filter");
 
-/* =========================
-TOPIC NOT FOUND
-========================= */
+function renderContent(type = "all") {
+
+```
+contentElement.innerHTML = "";
 
 if (!topic) {
+    return;
+}
 
-titleElement.textContent =
-    "বিষয় পাওয়া যায়নি";
+const filteredContent =
+    type === "all"
+        ? topic.content
+        : topic.content.filter(function(item) {
+            return item.type === type;
+        });
 
-descriptionElement.textContent =
-    "দুঃখিত, এই বিষয়টি এখনো যোগ করা হয়নি।";
 
-contentElement.innerHTML = `
-    <article class="card">
+if (filteredContent.length === 0) {
 
-        <h3>বিষয় পাওয়া যায়নি</h3>
+    contentElement.innerHTML = `
+        <article class="card">
+            <h3>এই ধরনের কোনো কনটেন্ট এখনো নেই</h3>
+            <p>
+                এই বিষয়ে এই ধরনের কনটেন্ট শীঘ্রই যোগ করা হবে।
+            </p>
+        </article>
+    `;
 
-        <p>
-            অনুগ্রহ করে বিষয়সমূহের পেজ থেকে একটি বিষয় নির্বাচন করুন।
-        </p>
+    return;
+}
 
-        <a href="topics.html">
-            বিষয়সমূহ দেখুন →
+
+filteredContent.forEach(function(item) {
+
+    const article =
+        document.createElement("article");
+
+    article.className = "card";
+
+    article.innerHTML = `
+        <span class="content-type">
+            ${item.type}
+        </span>
+
+        <h3>${item.title}</h3>
+
+        <p>${item.description}</p>
+
+        <a href="${item.link}">
+            ${item.linkText}
         </a>
+    `;
 
-    </article>
-`;
+    contentElement.appendChild(article);
 
+});
+```
 
-} else {
+}
 
+if (topic) {
 
+```
 document.title =
     topic.title + " | Maktab Al Hidayah";
 
@@ -267,133 +309,52 @@ titleElement.textContent =
 descriptionElement.textContent =
     topic.description;
 
+renderContent();
+```
 
-/* =========================
-   RENDER CONTENT
-========================= */
+} else {
 
-function renderContent(type = "all") {
+```
+titleElement.textContent =
+    "বিষয় পাওয়া যায়নি";
 
-    contentElement.innerHTML = "";
+descriptionElement.textContent =
+    "দুঃখিত, এই বিষয়টি এখনো যোগ করা হয়নি।";
 
-    let filteredContent;
+contentElement.innerHTML = `
+    <article class="card">
+        <h3>বিষয় পাওয়া যায়নি</h3>
 
-    if (type === "all") {
+        <p>
+            অনুগ্রহ করে বিষয়সমূহের পেজ থেকে একটি বিষয় নির্বাচন করুন।
+        </p>
 
-        filteredContent =
-            topic.content;
-
-    } else {
-
-        filteredContent =
-            topic.content.filter(function (item) {
-
-                return item.type === type;
-
-            });
-
-    }
-
-
-    if (filteredContent.length === 0) {
-
-        contentElement.innerHTML = `
-            <article class="card">
-
-                <h3>এখনো কোনো কনটেন্ট যোগ করা হয়নি</h3>
-
-                <p>
-                    এই ধরনের কনটেন্ট বর্তমানে এই বিষয়ে পাওয়া যাচ্ছে না।
-                </p>
-
-            </article>
-        `;
-
-        return;
-    }
-
-
-    filteredContent.forEach(function (item) {
-
-        const article =
-            document.createElement("article");
-
-        article.className = "card";
-
-
-        let buttonText = "বিস্তারিত দেখুন →";
-
-        if (item.type === "ভিডিও") {
-            buttonText = "কোর্স দেখুন →";
-        }
-
-        if (item.type === "বই") {
-            buttonText = "বইটি পড়ুন →";
-        }
-
-        if (item.type === "অডিও") {
-            buttonText = "অডিও শুনুন →";
-        }
-
-        if (item.type === "প্যামফ্লেট") {
-            buttonText = "প্যামফ্লেট দেখুন →";
-        }
-
-
-        article.innerHTML = `
-
-            <span class="content-type">
-                ${item.type}
-            </span>
-
-            <h3>
-                ${item.title}
-            </h3>
-
-            <p>
-                ${item.description}
-            </p>
-
-            <a href="${item.link}">
-                ${buttonText}
-            </a>
-
-        `;
-
-
-        contentElement.appendChild(article);
-
-    });
+        <a href="topics.html">
+            বিষয়সমূহ দেখুন →
+        </a>
+    </article>
+`;
+```
 
 }
 
+filterButtons.forEach(function(button) {
 
-/* প্রথমে সব content দেখাবে */
+```
+button.addEventListener("click", function() {
 
-renderContent();
-
-
-/* =========================
-   FILTER BUTTONS
-========================= */
-
-filterButtons.forEach(function (button) {
-
-    button.addEventListener("click", function () {
-
-        filterButtons.forEach(function (btn) {
-            btn.classList.remove("active");
-        });
-
-        button.classList.add("active");
-
-        const selectedType =
-            button.dataset.type;
-
-        renderContent(selectedType);
-
+    filterButtons.forEach(function(btn) {
+        btn.classList.remove("active");
     });
+
+    button.classList.add("active");
+
+    const selectedType =
+        button.getAttribute("data-type");
+
+    renderContent(selectedType);
 
 });
+```
 
-}
+});
