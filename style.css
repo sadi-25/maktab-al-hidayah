@@ -849,3 +849,24 @@ background: #a07b28;
 }
 
 }
+/* Audio Library */
+
+.audio-card audio {
+width: 100%;
+margin-top: 15px;
+}
+
+.audio-source {
+font-size: 13px;
+color: #666;
+margin-top: 12px;
+}
+
+.audio-source a {
+color: #174d3b;
+text-decoration: none;
+}
+
+.audio-source a:hover {
+text-decoration: underline;
+}
