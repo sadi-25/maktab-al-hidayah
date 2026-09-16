@@ -2,8 +2,27 @@ name: Auto Update Content
 
 on: [push]
 
+permissions:
+  contents: write
+
 jobs:
-  test:
+  generate:
     runs-on: ubuntu-latest
+
     steps:
-      - run: echo "Auto Update Content is working"
+        - uses: actions/checkout@v4
+
+        - uses: actions/setup-node@v4
+    with:
+                node-version: 20
+        - run: node scripts/generate-content.js
+
+        - run: git config user.name "github-actions[bot]"
+
+        - run: git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+        - run: git add content-manifest.json
+
+        - run: git diff --cached --quiet || git commit -m "Auto update content manifest"
+
+        - run: git push
