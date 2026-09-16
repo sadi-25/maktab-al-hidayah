@@ -16,7 +16,6 @@ jobs:
 generate-content:
 runs-on: ubuntu-latest
 
-```
 steps:
   - name: Checkout repository
     uses: actions/checkout@v4
@@ -42,4 +41,3 @@ steps:
         git commit -m "Auto update content manifest"
         git push
       fi
-```
