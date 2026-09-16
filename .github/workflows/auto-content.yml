@@ -16,9 +16,10 @@ contents: write
 jobs:
 generate-content:
 runs-on: ubuntu-latest
+
 steps:
-- name: Checkout repository
-uses: actions/checkout@v4
+  - name: Checkout repository
+    uses: actions/checkout@v4
 
   - name: Setup Node.js
     uses: actions/setup-node@v4
@@ -29,13 +30,4 @@ uses: actions/checkout@v4
     run: node scripts/generate-content.js
 
   - name: Save generated manifest
-    run: |
-      git config user.name "github-actions[bot]"
-      git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-      git add content-manifest.json
-      if git diff --cached --quiet; then
-        echo "No changes to commit."
-      else
-        git commit -m "Auto update content manifest"
-        git push
-      fi
+    run: git add content-manifest.json && git diff --cached --quiet || (git config user.name "github-actions[bot]" && git config user.email "41898282+github-actions[bot]@users.noreply.github.com" && git commit -m "Auto update content manifest" && git push)
