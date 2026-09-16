@@ -2,12 +2,13 @@ name: Auto Update Content
 
 on:
 workflow_dispatch:
-  push:
-    branches:
-      - main
+
+push:
+branches:
+- main
 paths:
-- "content/**"
-- "scripts/**"
+- "content/"
+- "scripts/"
 - ".github/workflows/auto-content.yml"
 
 permissions:
@@ -16,7 +17,6 @@ contents: write
 jobs:
 generate-content:
 runs-on: ubuntu-latest
-
 
 steps:
   - name: Checkout repository
@@ -43,13 +43,3 @@ steps:
         git commit -m "Auto update content manifest"
         git push
       fi
-
-      git add content-manifest.json
-
-      if git diff --cached --quiet; then
-        echo "No changes to commit."
-      else
-        git commit -m "Auto update content manifest"
-        git push
-      fi
-
