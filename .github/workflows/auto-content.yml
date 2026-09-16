@@ -1,7 +1,9 @@
 name: Auto Update Content
+
 on: [push]
+
 jobs:
-test:
-runs-on: ubuntu-latest
-steps:
-- run: echo "Auto Update Content is working"
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Auto Update Content is working"
