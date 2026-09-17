@@ -31,14 +31,14 @@ sourceUrl: "https://islamhouse.com/bn/"
     title: "তাওহীদ পরিচিতি",
     description: "এ বইটিতে ইসলামী আকীদার পরিচিতি অত্যন্ত প্রাঞ্জলভাবে তুলে ধরা হয়েছে। ইসলামী আকীদার গুরুত্বপূর্ণ অংশ তাওহীদ সম্পর্কিত বিস্তারিত আলোচনা আল-কুরআন ও সহীহ হাদীসের আলোকে পেশ করা হয়েছে।",
     author: "সালেহ ইবন ফাওযান আল-ফাওযান",
-    source: "Byenah"
+    source: "https://islamhouse.com/bn/"
 }
 ,
 "al tawhid.pdf": {
     title: "কিতাবুত তাওহীদ যা বান্দার ওপর আল্লাহর হক",
     description: "কিতাবুত তাওহীদ যা বান্দার ওপর আল্লাহর হক।",
     author: "মুহাম্মাদ ইবন আব্দুল ওয়াহহাব",
-    source: "IslamHouse"
+    source: "https://islamhouse.com/bn/"
 }
 
 };
