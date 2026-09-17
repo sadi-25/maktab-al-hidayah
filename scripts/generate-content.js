@@ -30,8 +30,16 @@ sourceUrl: "https://islamhouse.com/bn/"
 "tawhid.pdf": {
     title: "তাওহীদ",
     description: "তাওহীদ ও আকীদাহ সম্পর্কিত একটি বই।"
+    author: "ড. সালেহ ইবন ফাওযান আল-ফাওযান"
+    sourceUrl: "https://islamhouse.com/bn/"
 }
-
+,
+"al tawhid.pdf": {
+    title: "কিতাবুত তাওহীদ ",
+    description: "কিতাবুত তাওহীদ যা বান্দার ওপর আল্লাহর হক।"
+    author: "শাইখ মুহাম্মাদ ইবন আব্দুল ওয়াহহাব"
+    sourceUrl: "https://islamhouse.com/bn/"
+}
 
 };
 
