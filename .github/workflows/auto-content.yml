@@ -1,5 +1,6 @@
 name: Auto Update Content
-
+permissions:
+  contents: write
 on: [push]
 
 jobs:
