@@ -162,7 +162,20 @@ topicContent.innerHTML = `
 } else {
 topicTitle.textContent = topic.title;
 topicDescription.textContent = topic.description;
+fetch("content-manifest.json")
+    .then(response => response.json())
+    .then(manifest => {
+        const books = manifest.books.filter(book => book.topic === topicKey);
+        const audio = manifest.audio.filter(item => item.topic === topicKey);
 
+        topic.content = [
+            ...topic.content,
+            ...books,
+            ...audio
+        ];
+        
+        renderContent("all");
+    });
 
 function renderContent(type = "all") {
 
