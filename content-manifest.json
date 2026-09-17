@@ -1,13 +1,15 @@
 {
-  "generatedAt": "2026-09-17T09:54:58.574Z",
+  "generatedAt": "2026-09-17T10:57:38.849Z",
   "books": [
     {
-      "title": "al tawhid",
-      "description": "",
+      "title": "কিতাবুত তাওহীদ ",
+      "description": "কিতাবুত তাওহীদ যা বান্দার ওপর আল্লাহর হক।",
       "type": "বই",
       "topic": "tawhid",
       "topicName": "তাওহীদ ও আকীদাহ",
-      "file": "content/books/tawhid/al tawhid.pdf"
+      "file": "content/books/tawhid/al tawhid.pdf",
+      "author": "শাইখ মুহাম্মাদ ইবন আব্দুল ওয়াহহাব",
+      "source": "https://islamhouse.com/bn/"
     },
     {
       "title": "তাওহীদ",
@@ -15,7 +17,9 @@
       "type": "বই",
       "topic": "tawhid",
       "topicName": "তাওহীদ ও আকীদাহ",
-      "file": "content/books/tawhid/tawhid.pdf"
+      "file": "content/books/tawhid/tawhid.pdf",
+      "author": "ড. সালেহ ইবন ফাওযান আল-ফাওযান",
+      "source": "https://islamhouse.com/bn/"
     }
   ],
   "audio": [
@@ -49,12 +53,14 @@
       "name": "তাওহীদ ও আকীদাহ",
       "books": [
         {
-          "title": "al tawhid",
-          "description": "",
+          "title": "কিতাবুত তাওহীদ ",
+          "description": "কিতাবুত তাওহীদ যা বান্দার ওপর আল্লাহর হক।",
           "type": "বই",
           "topic": "tawhid",
           "topicName": "তাওহীদ ও আকীদাহ",
-          "file": "content/books/tawhid/al tawhid.pdf"
+          "file": "content/books/tawhid/al tawhid.pdf",
+          "author": "শাইখ মুহাম্মাদ ইবন আব্দুল ওয়াহহাব",
+          "source": "https://islamhouse.com/bn/"
         },
         {
           "title": "তাওহীদ",
@@ -62,7 +68,9 @@
           "type": "বই",
           "topic": "tawhid",
           "topicName": "তাওহীদ ও আকীদাহ",
-          "file": "content/books/tawhid/tawhid.pdf"
+          "file": "content/books/tawhid/tawhid.pdf",
+          "author": "ড. সালেহ ইবন ফাওযান আল-ফাওযান",
+          "source": "https://islamhouse.com/bn/"
         }
       ],
       "audio": []
