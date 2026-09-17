@@ -9,3 +9,5 @@ jobs:
       - uses: actions/checkout@v4
       - run: node scripts/generate-content.js
       - run: git add content-manifest.json
+      - run: git commit -m "Update content manifest"
+      - run: git push
