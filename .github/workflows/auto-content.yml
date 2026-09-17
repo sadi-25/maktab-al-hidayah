@@ -6,4 +6,5 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v4
       - run: node scripts/generate-content.js
