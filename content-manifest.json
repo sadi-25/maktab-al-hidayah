@@ -1,0 +1,103 @@
+{
+  "generatedAt": "2026-09-17T09:20:37.112Z",
+  "books": [
+    {
+      "title": "তাওহীদ",
+      "description": "তাওহীদ ও আকীদাহ সম্পর্কিত একটি বই।",
+      "type": "বই",
+      "topic": "tawhid",
+      "topicName": "তাওহীদ ও আকীদাহ",
+      "file": "content/books/tawhid/tawhid.pdf"
+    }
+  ],
+  "audio": [
+    {
+      "title": "পবিত্র কুরআন পাঠের মর্যাদা",
+      "description": "পবিত্র কুরআন পাঠের মর্যাদা ও গুরুত্ব সম্পর্কে আলোচনা।",
+      "type": "অডিও",
+      "topic": "general",
+      "topicName": "অন্যান্য",
+      "file": "content/audio/bn_Pabitra_Kuraana_Pathera_Maryada.mp3",
+      "speaker": "মুহাম্মাদ মর্তুজা ইবন আয়েশ মুহাম্মাদ",
+      "publisher": "ইসলাম প্রচার ব্যুরো, রাবওয়াহ, রিয়াদ",
+      "sourceName": "IslamHouse",
+      "sourceUrl": "https://islamhouse.com/bn/"
+    },
+    {
+      "title": "পবিত্র কুরআন পাঠের মর্যাদা",
+      "description": "পবিত্র কুরআন পাঠের মর্যাদা ও গুরুত্ব সম্পর্কে আলোচনা।",
+      "type": "অডিও",
+      "topic": "quran",
+      "topicName": "কুরআন",
+      "file": "content/audio/quran/bn_Pabitra_Kuraana_Pathera_Maryada.mp3",
+      "speaker": "মুহাম্মাদ মর্তুজা ইবন আয়েশ মুহাম্মাদ",
+      "publisher": "ইসলাম প্রচার ব্যুরো, রাবওয়াহ, রিয়াদ",
+      "sourceName": "IslamHouse",
+      "sourceUrl": "https://islamhouse.com/bn/"
+    }
+  ],
+  "topics": {
+    "tawhid": {
+      "name": "তাওহীদ ও আকীদাহ",
+      "books": [
+        {
+          "title": "তাওহীদ",
+          "description": "তাওহীদ ও আকীদাহ সম্পর্কিত একটি বই।",
+          "type": "বই",
+          "topic": "tawhid",
+          "topicName": "তাওহীদ ও আকীদাহ",
+          "file": "content/books/tawhid/tawhid.pdf"
+        }
+      ],
+      "audio": []
+    },
+    "islam": {
+      "name": "ইসলাম সম্পর্কে জানুন",
+      "books": [],
+      "audio": []
+    },
+    "quran": {
+      "name": "কুরআন",
+      "books": [],
+      "audio": [
+        {
+          "title": "পবিত্র কুরআন পাঠের মর্যাদা",
+          "description": "পবিত্র কুরআন পাঠের মর্যাদা ও গুরুত্ব সম্পর্কে আলোচনা।",
+          "type": "অডিও",
+          "topic": "quran",
+          "topicName": "কুরআন",
+          "file": "content/audio/quran/bn_Pabitra_Kuraana_Pathera_Maryada.mp3",
+          "speaker": "মুহাম্মাদ মর্তুজা ইবন আয়েশ মুহাম্মাদ",
+          "publisher": "ইসলাম প্রচার ব্যুরো, রাবওয়াহ, রিয়াদ",
+          "sourceName": "IslamHouse",
+          "sourceUrl": "https://islamhouse.com/bn/"
+        }
+      ]
+    },
+    "sunnah": {
+      "name": "রাসূল ﷺ ও সুন্নাহ",
+      "books": [],
+      "audio": []
+    },
+    "ibadah": {
+      "name": "ইবাদত",
+      "books": [],
+      "audio": []
+    },
+    "akhlaq": {
+      "name": "আখলাক ও জীবন",
+      "books": [],
+      "audio": []
+    },
+    "questions": {
+      "name": "প্রশ্ন ও সংশয়",
+      "books": [],
+      "audio": []
+    },
+    "new-muslim": {
+      "name": "নও-মুসলিম",
+      "books": [],
+      "audio": []
+    }
+  }
+}
