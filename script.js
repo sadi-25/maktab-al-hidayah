@@ -173,10 +173,36 @@ if (qnaInput && qnaButton && qnaResult) {
             return;
         }
 
-        const results = qnaData.filter(item =>
-            item.question.toLowerCase().includes(question) ||
-            item.answer.toLowerCase().includes(question)
-        );
+        const words = question
+    .replace(/[?؟!,.]/g, "")
+    .split(/\s+/)
+    .filter(word => word.length > 1);
+
+const results = qnaData
+    .map(item => {
+
+        const text = (
+            item.question + " " +
+            item.answer + " " +
+            item.source
+        ).toLowerCase();
+
+        let score = 0;
+
+        words.forEach(word => {
+            if (text.includes(word)) {
+                score++;
+            }
+        });
+
+        return {
+            ...item,
+            score: score
+        };
+
+    })
+    .filter(item => item.score > 0)
+    .sort((a, b) => b.score - a.score);
 
         if (results.length === 0) {
 
