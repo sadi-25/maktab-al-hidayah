@@ -26,12 +26,12 @@ sourceName: "IslamHouse",
 sourceUrl: "https://islamhouse.com/bn/"
 },
 
-```
+
 "tawhid.pdf": {
     title: "তাওহীদ",
     description: "তাওহীদ ও আকীদাহ সম্পর্কিত একটি বই।"
 }
-```
+
 
 };
 
@@ -40,7 +40,7 @@ if (!fs.existsSync(dir)) {
 return [];
 }
 
-```
+
 const results = [];
 
 function walk(currentDir) {
@@ -62,7 +62,7 @@ function walk(currentDir) {
 walk(dir);
 
 return results;
-```
+
 
 }
 
@@ -72,7 +72,7 @@ CONTENT_DIR,
 filePath
 );
 
-```
+
 const parts = relative.split(path.sep);
 
 if (parts.length >= 3 && parts[0] === contentType) {
@@ -84,7 +84,7 @@ if (parts.length >= 3 && parts[0] === contentType) {
 }
 
 return "general";
-```
+
 
 }
 
@@ -103,7 +103,7 @@ const relativePath = path
 .split(path.sep)
 .join("/");
 
-```
+
 const topic = getTopicFromPath(filePath, type);
 
 const item = {
@@ -120,7 +120,7 @@ if (metadata[fileName]) {
 }
 
 return item;
-```
+
 
 }
 
@@ -155,13 +155,13 @@ audio: audio.filter(item => item.topic === key)
 const manifest = {
 generatedAt: new Date().toISOString(),
 
-```
+
 books: books,
 
 audio: audio,
 
 topics: topics
-```
+
 
 };
 
