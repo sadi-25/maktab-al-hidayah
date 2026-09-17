@@ -214,8 +214,8 @@ function renderContent(type = "all") {
                 ${item.description}
             </p>
 
-            <a href="${item.link}">
-                ${item.linkText}
+            <a href="${item.link || item.file}">
+                ${item.linkText || "বইটি পড়ুন →"}
             </a>
 
         </article>
