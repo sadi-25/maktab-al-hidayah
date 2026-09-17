@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-17T13:25:50.248Z",
+  "generatedAt": "2026-09-17T13:32:10.092Z",
   "books": [
     {
       "title": "কিতাবুত তাওহীদ যা বান্দার ওপর আল্লাহর হক",
@@ -9,7 +9,7 @@
       "topicName": "তাওহীদ ও আকীদাহ",
       "file": "content/books/tawhid/al tawhid.pdf",
       "author": "মুহাম্মাদ ইবন আব্দুল ওয়াহহাব",
-      "source": "IslamHouse"
+      "source": "https://islamhouse.com/bn/"
     },
     {
       "title": "তাওহীদ পরিচিতি",
@@ -19,7 +19,7 @@
       "topicName": "তাওহীদ ও আকীদাহ",
       "file": "content/books/tawhid/tawhid.pdf",
       "author": "সালেহ ইবন ফাওযান আল-ফাওযান",
-      "source": "Byenah"
+      "source": "https://islamhouse.com/bn/"
     }
   ],
   "audio": [
@@ -60,7 +60,7 @@
           "topicName": "তাওহীদ ও আকীদাহ",
           "file": "content/books/tawhid/al tawhid.pdf",
           "author": "মুহাম্মাদ ইবন আব্দুল ওয়াহহাব",
-          "source": "IslamHouse"
+          "source": "https://islamhouse.com/bn/"
         },
         {
           "title": "তাওহীদ পরিচিতি",
@@ -70,7 +70,7 @@
           "topicName": "তাওহীদ ও আকীদাহ",
           "file": "content/books/tawhid/tawhid.pdf",
           "author": "সালেহ ইবন ফাওযান আল-ফাওযান",
-          "source": "Byenah"
+          "source": "https://islamhouse.com/bn/"
         }
       ],
       "audio": []
