@@ -213,7 +213,8 @@ function renderContent(type = "all") {
             <p>
                 ${item.description}
             </p>
-
+    ${item.author ? `<div class="book-author"><strong>লেখক:</strong> ${item.author}</div>` : ""}
+    ${item.source ? `<div class="book-source"><strong>Source:</strong> ${item.source}</div>` : ""}
             <a href="${item.link || item.file}">
                 ${item.linkText || "বইটি পড়ুন →"}
             </a>
