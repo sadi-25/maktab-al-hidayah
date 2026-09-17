@@ -140,3 +140,67 @@ searchInput.addEventListener("keydown", function (event) {
     }
 
 });
+// Islamic Q&A
+
+const qnaInput = document.getElementById("qnaInput");
+const qnaButton = document.getElementById("qnaButton");
+const qnaResult = document.getElementById("qnaResult");
+
+if (qnaInput && qnaButton && qnaResult) {
+
+    let qnaData = [];
+
+    fetch("content/qna/qna.json")
+        .then(response => response.json())
+        .then(data => {
+            qnaData = data;
+        });
+
+    qnaButton.addEventListener("click", searchQna);
+
+    qnaInput.addEventListener("keydown", function(event) {
+        if (event.key === "Enter") {
+            searchQna();
+        }
+    });
+
+    function searchQna() {
+
+        const question = qnaInput.value.trim().toLowerCase();
+
+        if (!question) {
+            qnaResult.innerHTML = "<p>অনুগ্রহ করে একটি প্রশ্ন লিখুন।</p>";
+            return;
+        }
+
+        const results = qnaData.filter(item =>
+            item.question.toLowerCase().includes(question) ||
+            item.answer.toLowerCase().includes(question)
+        );
+
+        if (results.length === 0) {
+
+            qnaResult.innerHTML = `
+                <div class="qna-answer">
+                    <p>দুঃখিত, এই প্রশ্নের জন্য আমাদের সংরক্ষিত তথ্যের মধ্যে কোনো উত্তর পাওয়া যায়নি।</p>
+                </div>
+            `;
+
+            return;
+        }
+
+        qnaResult.innerHTML = results.map(item => `
+            <div class="qna-answer">
+
+                <h3>${item.question}</h3>
+
+                <p>${item.answer}</p>
+
+                <div class="qna-source">
+                    📖 উৎস: ${item.source}
+                </div>
+
+            </div>
+        `).join("");
+    }
+}
