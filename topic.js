@@ -160,8 +160,6 @@ topicContent.innerHTML = `
 
 
 } else {
-
-```
 topicTitle.textContent = topic.title;
 topicDescription.textContent = topic.description;
 
