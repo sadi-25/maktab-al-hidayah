@@ -6,4 +6,4 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "Auto Update Content is working"
+      - run: node scripts/generate-content.js
