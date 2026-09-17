@@ -149,76 +149,160 @@ const qnaResult = document.getElementById("qnaResult");
 if (qnaInput && qnaButton && qnaResult) {
 
     let qnaData = [];
+    let knowledgeData = [];
 
-    fetch("content/qna/qna.json")
-        .then(response => response.json())
-        .then(data => {
-            qnaData = data;
-        });
+    Promise.all([
+        fetch("content/qna/qna.json").then(response => response.json()),
+        fetch("content/qna/knowledge.json").then(response => response.json())
+    ])
+    .then(([qna, knowledge]) => {
+
+        qnaData = qna;
+        knowledgeData = knowledge;
+
+    })
+    .catch(error => {
+
+        console.error("Q&A data loading error:", error);
+
+        qnaResult.innerHTML = `
+            <div class="qna-answer">
+                <p>তথ্য লোড করতে সমস্যা হয়েছে।</p>
+            </div>
+        `;
+
+    });
+
 
     qnaButton.addEventListener("click", searchQna);
 
+
     qnaInput.addEventListener("keydown", function(event) {
+
         if (event.key === "Enter") {
             searchQna();
         }
+
     });
+
 
     function searchQna() {
 
         const question = qnaInput.value.trim().toLowerCase();
 
+
         if (!question) {
-            qnaResult.innerHTML = "<p>অনুগ্রহ করে একটি প্রশ্ন লিখুন।</p>";
+
+            qnaResult.innerHTML =
+                "<p>অনুগ্রহ করে একটি প্রশ্ন লিখুন।</p>";
+
             return;
         }
 
+
         const words = question
-    .replace(/[?؟!,.]/g, "")
-    .split(/\s+/)
-    .filter(word => word.length > 1);
+            .replace(/[?؟!,.]/g, "")
+            .split(/\s+/)
+            .filter(word => word.length > 1);
 
-const results = qnaData
-    .map(item => {
 
-        const text = (
-            item.question + " " +
-            item.answer + " " +
-            item.source
-        ).toLowerCase();
+        const results = [
 
-        let score = 0;
+            // Q&A database
+            ...qnaData.map(item => ({
 
-        words.forEach(word => {
-            if (text.includes(word)) {
-                score++;
-            }
-        });
+                title: item.question,
 
-        return {
-            ...item,
-            score: score
-        };
+                answer: item.answer,
 
-    })
-    .filter(item => item.score > 0)
-    .sort((a, b) => b.score - a.score);
+                source: item.source || "Q&A",
+
+                reference: item.reference || "",
+
+                searchText: (
+                    item.question + " " +
+                    item.answer + " " +
+                    (item.source || "")
+                ).toLowerCase()
+
+            })),
+
+
+            // Book knowledge
+            ...knowledgeData.map(item => ({
+
+                title: item.title,
+
+                answer: item.content,
+
+                source: item.source || "তাওহীদ পরিচিতি",
+
+                reference: item.section || "",
+
+                searchText: (
+                    item.title + " " +
+                    item.content + " " +
+                    (item.source || "") + " " +
+                    (item.author || "") + " " +
+                    (item.section || "")
+                ).toLowerCase()
+
+            }))
+
+        ]
+
+
+        .map(item => {
+
+            let score = 0;
+
+
+            words.forEach(word => {
+
+                if (item.searchText.includes(word)) {
+                    score++;
+                }
+
+            });
+
+
+            return {
+
+                ...item,
+
+                score: score
+
+            };
+
+        })
+
+
+        .filter(item => item.score > 0)
+
+
+        .sort((a, b) => b.score - a.score);
+
 
         if (results.length === 0) {
 
             qnaResult.innerHTML = `
                 <div class="qna-answer">
-                    <p>দুঃখিত, এই প্রশ্নের জন্য আমাদের সংরক্ষিত তথ্যের মধ্যে কোনো উত্তর পাওয়া যায়নি।</p>
+                    <p>
+                        দুঃখিত, এই প্রশ্নের জন্য আমাদের
+                        সংরক্ষিত তথ্যের মধ্যে কোনো উত্তর পাওয়া যায়নি।
+                    </p>
                 </div>
             `;
 
             return;
         }
 
+
         qnaResult.innerHTML = results.map(item => `
+
             <div class="qna-answer">
 
-                <h3>${item.question}</h3>
+                <h3>${item.title}</h3>
 
                 <p>${item.answer}</p>
 
@@ -226,7 +310,20 @@ const results = qnaData
                     📖 উৎস: ${item.source}
                 </div>
 
+                ${
+                    item.reference
+                    ? `
+                        <div class="qna-reference">
+                            📚 অংশ: ${item.reference}
+                        </div>
+                    `
+                    : ""
+                }
+
             </div>
+
         `).join("");
+
     }
+
 }
