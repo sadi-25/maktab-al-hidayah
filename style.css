@@ -967,7 +967,39 @@ footer .copyright {
     text-decoration: underline;
 }
 
+/* =========================================================
+   LIBRARY CARDS — MODERN
+   ========================================================= */
 
+.library-grid {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.library-grid .card {
+    padding: 28px 26px;
+    background: #fbfaf6;
+    border-color: #e5e0d2;
+}
+
+.library-grid .card h3 {
+    font-size: 20px;
+    color: #12372a;
+    margin-bottom: 11px;
+}
+
+.library-grid .card p {
+    color: #6b736e;
+    margin-bottom: 20px;
+}
+
+.library-grid .card a {
+    color: #94711a;
+}
+
+.library-grid .card:hover {
+    background: #fff;
+    border-color: rgba(212, 175, 55, 0.55);
+}
 /* =========================================================
    GENERAL RESPONSIVE
    ========================================================= */
