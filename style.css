@@ -90,7 +90,7 @@ header nav a:hover {
 
 
 /* =========================================================
-   HERO
+   HERO — MODERN
    ========================================================= */
 
 .hero {
@@ -98,25 +98,42 @@ header nav a:hover {
     overflow: hidden;
     background:
         radial-gradient(
-            circle at 50% 0%,
-            rgba(212, 175, 55, 0.12),
-            transparent 38%
+            circle at 50% -20%,
+            rgba(212, 175, 55, 0.16),
+            transparent 42%
         ),
-        #12372a;
+        linear-gradient(
+            145deg,
+            #102f24 0%,
+            #12372a 55%,
+            #174d3b 100%
+        );
     color: #fff;
     padding: 105px 20px 110px;
     text-align: center;
 }
 
+.hero::before {
+    content: "";
+    position: absolute;
+    width: 520px;
+    height: 520px;
+    border: 1px solid rgba(212, 175, 55, 0.07);
+    border-radius: 50%;
+    left: 50%;
+    top: -350px;
+    transform: translateX(-50%);
+}
+
 .hero::after {
     content: "";
     position: absolute;
-    width: 420px;
-    height: 420px;
-    border: 1px solid rgba(212, 175, 55, 0.08);
+    width: 300px;
+    height: 300px;
+    border: 1px solid rgba(255, 255, 255, 0.035);
     border-radius: 50%;
     left: 50%;
-    top: -260px;
+    bottom: -230px;
     transform: translateX(-50%);
 }
 
@@ -132,21 +149,22 @@ header nav a:hover {
     color: #d4af37;
     font-size: 15px;
     font-weight: 600;
-    margin-bottom: 16px;
-    letter-spacing: 0.5px;
+    margin-bottom: 18px;
+    letter-spacing: 0.6px;
 }
 
 .hero h2 {
     color: #fff;
-    font-size: clamp(34px, 5vw, 50px);
+    font-size: clamp(35px, 5vw, 52px);
     line-height: 1.35;
-    margin-bottom: 20px;
+    margin-bottom: 21px;
     font-weight: 700;
+    letter-spacing: -0.5px;
 }
 
 .hero-content > p:not(.hero-label) {
     max-width: 690px;
-    margin: 0 auto 32px;
+    margin: 0 auto 34px;
     color: #dce5df;
     font-size: 16px;
     line-height: 2;
@@ -156,7 +174,7 @@ header nav a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 12px;
+    gap: 13px;
     flex-wrap: wrap;
 }
 
@@ -164,29 +182,33 @@ header nav a:hover {
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    min-height: 46px;
-    padding: 10px 23px;
-    border-radius: 9px;
+    min-height: 48px;
+    padding: 11px 25px;
+    border-radius: 10px;
     font-size: 14px;
     font-weight: 600;
-    transition: 0.22s ease;
+    transition:
+        transform 0.22s ease,
+        background 0.22s ease,
+        box-shadow 0.22s ease;
 }
 
 .hero-button.primary {
     background: #d4af37;
     color: #12372a;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
 }
 
 .hero-button.primary:hover {
     background: #e3c45a;
     transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.18);
 }
 
 .hero-button.secondary {
-    border: 1px solid rgba(212, 175, 55, 0.8);
+    border: 1px solid rgba(212, 175, 55, 0.75);
     color: #fff;
-    background: rgba(255, 255, 255, 0.02);
+    background: rgba(255, 255, 255, 0.025);
 }
 
 .hero-button.secondary:hover {
