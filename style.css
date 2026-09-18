@@ -1243,3 +1243,10 @@ footer .copyright {
         padding: 5px 7px;
     }
 }
+/* =========================================================
+   LIBRARY GRID — FINAL
+   ========================================================= */
+
+.card-grid.library-grid {
+    grid-template-columns: repeat(3, 1fr);
+}
