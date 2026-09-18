@@ -368,15 +368,22 @@ main section > p {
 
 
 /* =========================================================
-   CARD
+   TOPIC CARDS — MODERN
    ========================================================= */
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+}
 
 .card {
     position: relative;
     background: #fff;
-    border: 1px solid #e6e5de;
-    border-radius: 14px;
-    padding: 26px;
+    border: 1px solid #e4e7e2;
+    border-radius: 16px;
+    padding: 27px 25px 24px;
+    box-shadow: 0 4px 18px rgba(18, 55, 42, 0.04);
     transition:
         transform 0.22s ease,
         box-shadow 0.22s ease,
@@ -385,34 +392,40 @@ main section > p {
 
 .card:hover {
     transform: translateY(-5px);
-    border-color: rgba(212, 175, 55, 0.65);
-    box-shadow: 0 14px 35px rgba(24, 52, 40, 0.09);
+    border-color: rgba(212, 175, 55, 0.45);
+    box-shadow: 0 14px 32px rgba(18, 55, 42, 0.09);
 }
 
 .card h3 {
     color: #12372a;
-    font-size: 19px;
-    line-height: 1.5;
+    font-size: 18px;
+    line-height: 1.55;
     margin-bottom: 10px;
+    font-weight: 700;
 }
 
 .card p {
     color: #68716c;
     font-size: 14px;
     line-height: 1.85;
-    margin-bottom: 18px;
+    margin-bottom: 19px;
 }
 
 .card a {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
     color: #94711a;
     font-size: 14px;
     font-weight: 700;
-    transition: 0.2s;
+    text-decoration: none;
+    transition:
+        color 0.2s ease,
+        transform 0.2s ease;
 }
 
 .card a:hover {
     color: #12372a;
+    transform: translateX(3px);
 }
 
 
