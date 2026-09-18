@@ -219,27 +219,31 @@ header nav a:hover {
 
 
 /* =========================================================
-   SEARCH
+   SEARCH — MODERN
    ========================================================= */
 
 .search-section {
+    position: relative;
     background: #fff;
-    padding: 68px 20px;
+    padding: 72px 20px;
     text-align: center;
     border-bottom: 1px solid #e8e5dc;
 }
 
 .search-section h2 {
     color: #12372a;
-    font-size: 29px;
+    font-size: clamp(27px, 4vw, 32px);
     line-height: 1.4;
-    margin-bottom: 7px;
+    margin-bottom: 9px;
+    font-weight: 700;
 }
 
 .search-section > p {
+    max-width: 620px;
+    margin: 0 auto 27px;
     color: #737a75;
-    margin-bottom: 25px;
     font-size: 14px;
+    line-height: 1.8;
 }
 
 .search-box {
@@ -251,15 +255,19 @@ header nav a:hover {
 
 .search-box input {
     flex: 1;
-    height: 52px;
-    padding: 0 18px;
+    min-width: 0;
+    height: 54px;
+    padding: 0 19px;
     border: 1px solid #d9ddd8;
-    border-radius: 9px;
+    border-radius: 11px;
     outline: none;
+    font-family: inherit;
     font-size: 15px;
     color: #26332d;
     background: #fff;
-    transition: 0.2s ease;
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
 }
 
 .search-box input::placeholder {
@@ -268,30 +276,35 @@ header nav a:hover {
 
 .search-box input:focus {
     border-color: #174d3b;
-    box-shadow: 0 0 0 3px rgba(23, 77, 59, 0.08);
+    box-shadow: 0 0 0 4px rgba(23, 77, 59, 0.07);
 }
 
 .search-box button {
-    height: 52px;
-    padding: 0 25px;
+    height: 54px;
+    padding: 0 28px;
     border: none;
-    border-radius: 9px;
+    border-radius: 11px;
     background: #174d3b;
     color: #fff;
     cursor: pointer;
+    font-family: inherit;
     font-size: 14px;
     font-weight: 600;
-    transition: 0.22s ease;
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
 }
 
 .search-box button:hover {
     background: #0e3427;
     transform: translateY(-1px);
+    box-shadow: 0 7px 18px rgba(18, 55, 42, 0.14);
 }
 
 .search-result {
     max-width: 720px;
-    margin: 18px auto 0;
+    margin: 20px auto 0;
     text-align: left;
 }
 
@@ -1061,8 +1074,8 @@ footer .copyright {
 
     .search-box,
     .qna-box {
-        flex-direction: column;
-    }
+    flex-direction: column;
+}
 
     .search-box button,
     .qna-box button {
