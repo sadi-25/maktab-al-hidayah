@@ -1,0 +1,6 @@
+{
+  "name": "Maktab Al Hidayah",
+  "description": "কুরআন ও সহিহ সুন্নাহর আলোকে ইসলামের শিক্ষা — মাকতাব আল হিদায়াহ",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

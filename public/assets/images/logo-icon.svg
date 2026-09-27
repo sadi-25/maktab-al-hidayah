@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%">
+  <defs>
+    <linearGradient id="goldTile" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F59E0B" />
+      <stop offset="50%" stop-color="#D97706" />
+      <stop offset="100%" stop-color="#92400E" />
+    </linearGradient>
+    <linearGradient id="goldBook" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FEF08A" />
+      <stop offset="50%" stop-color="#FDE047" />
+      <stop offset="100%" stop-color="#F59E0B" />
+    </linearGradient>
+  </defs>
+
+  <!-- Gold Rounded Squircle Tile -->
+  <rect x="3" y="3" width="94" height="94" rx="26" fill="url(#goldTile)" stroke="#FDE68A" stroke-width="2.5" stroke-opacity="0.6" />
+
+  <!-- Inner delicate ring -->
+  <rect x="8" y="8" width="84" height="84" rx="21" fill="none" stroke="#FEF3C7" stroke-width="1" stroke-opacity="0.4" stroke-dasharray="4 2" />
+
+  <!-- Central Light / Nur Spire -->
+  <path d="M 48.5,36 L 50,18 L 51.5,36 Z" fill="#FEF08A" opacity="0.9" />
+  <circle cx="50" cy="17" r="2" fill="#FDE047" />
+
+  <!-- Holy Open Book (Quran) -->
+  <!-- Left Page -->
+  <path d="M 50,68 C 39,63 27,61 18,63 L 20,40 C 29,38 41,41 50,47 Z" fill="#FEF3C7" />
+  <path d="M 50,68 C 39,63 27,61 18,63 L 18,60 C 27,58 39,60 50,65 Z" fill="#D97706" />
+  <line x1="25" y1="46" x2="43" y2="49" stroke="#B45309" stroke-width="1.5" stroke-linecap="round" opacity="0.55" />
+  <line x1="25" y1="52" x2="43" y2="55" stroke="#B45309" stroke-width="1.5" stroke-linecap="round" opacity="0.55" />
+
+  <!-- Right Page -->
+  <path d="M 50,68 C 61,63 73,61 82,63 L 80,40 C 71,38 59,41 50,47 Z" fill="#FFFBEB" />
+  <path d="M 50,68 C 61,63 73,61 82,63 L 82,60 C 73,58 61,60 50,65 Z" fill="#D97706" />
+  <line x1="57" y1="49" x2="75" y2="46" stroke="#B45309" stroke-width="1.5" stroke-linecap="round" opacity="0.55" />
+  <line x1="57" y1="55" x2="75" y2="52" stroke="#B45309" stroke-width="1.5" stroke-linecap="round" opacity="0.55" />
+
+  <!-- Book Spine Center -->
+  <path d="M 48.8,47 L 51.2,47 L 51.2,68.5 L 48.8,68.5 Z" fill="#92400E" />
+
+  <!-- Rehal / Book Stand Base -->
+  <path d="M 34,71 L 50,83 L 66,71 L 62,69 L 50,78 L 38,69 Z" fill="url(#goldBook)" />
+</svg>

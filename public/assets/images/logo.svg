@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="100%" height="100%">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@600;700&amp;display=swap');
+      .brand-title {
+        font-family: 'Hind Siliguri', 'Noto Sans Bengali', sans-serif;
+        font-weight: 700;
+        fill: #0E5E3A;
+      }
+      .brand-subtitle {
+        font-family: 'Hind Siliguri', 'Noto Serif Bengali', serif;
+        font-weight: 600;
+        fill: #C2943B;
+      }
+    </style>
+    <!-- Radiant Nur Beam Gradient -->
+    <linearGradient id="nurGradient" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#B5832A" stop-opacity="0.95" />
+      <stop offset="30%" stop-color="#D8A53D" stop-opacity="0.9" />
+      <stop offset="70%" stop-color="#F5D67E" stop-opacity="0.65" />
+      <stop offset="100%" stop-color="#FFF9E5" stop-opacity="0.0" />
+    </linearGradient>
+
+    <!-- Warm Gold Gradient for inner book layers -->
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D4A23A" />
+      <stop offset="60%" stop-color="#C2943B" />
+      <stop offset="100%" stop-color="#A87B26" />
+    </linearGradient>
+  </defs>
+
+  <!-- Clean Canvas -->
+  <rect width="600" height="600" fill="#FFFFFF" />
+
+  <g transform="translate(0, 15)">
+    <!-- 1. CENTRAL NUR / SPIRE (Light from Quran) -->
+    <!-- Center main spire -->
+    <path d="M 296,285 L 300,65 L 304,285 Z" fill="url(#nurGradient)" />
+    <path d="M 298,285 L 300,75 L 302,285 Z" fill="#FFFDEE" opacity="0.75" />
+
+    <!-- Left accent beam -->
+    <path d="M 296,275 L 273,120 L 299,255 Z" fill="url(#nurGradient)" opacity="0.75" />
+    
+    <!-- Right accent beam -->
+    <path d="M 304,275 L 327,120 L 301,255 Z" fill="url(#nurGradient)" opacity="0.75" />
+
+    <!-- 2. OPEN BOOK ICON -->
+    <!-- Outer Green Wing - Left -->
+    <path d="M 300,326 
+             C 255,302 205,286 154,293 
+             L 186,202 
+             L 204,202 
+             L 174,282 
+             C 215,274 260,288 300,314 
+             Z" 
+          fill="#0E5E3A" />
+
+    <!-- Outer Green Wing - Right -->
+    <path d="M 300,326 
+             C 345,302 395,286 446,293 
+             L 414,202 
+             L 396,202 
+             L 426,282 
+             C 385,274 340,288 300,314 
+             Z" 
+          fill="#0E5E3A" />
+
+    <!-- Inner Gold Page - Left -->
+    <path d="M 300,312 
+             C 264,288 228,272 188,276 
+             L 212,196 
+             C 246,202 278,226 299,265 
+             C 292,238 266,212 230,205 
+             L 202,270 
+             C 238,266 270,280 300,302 
+             Z" 
+          fill="url(#goldGrad)" />
+
+    <!-- Inner Gold Page - Right -->
+    <path d="M 300,312 
+             C 336,288 372,272 412,276 
+             L 388,196 
+             C 354,202 322,226 301,265 
+             C 308,238 334,212 370,205 
+             L 398,270 
+             C 362,266 330,280 300,302 
+             Z" 
+          fill="url(#goldGrad)" />
+
+    <!-- Central spine base tip -->
+    <path d="M 297,314 L 300,328 L 303,314 Z" fill="#0E5E3A" />
+
+    <!-- 3. BRAND NAME TYPOGRAPHY -->
+    <!-- 'মাকতাব' (Maktab) -->
+    <text x="300" y="412" 
+          text-anchor="middle" 
+          class="brand-title" 
+          font-size="74" 
+          letter-spacing="1.5">মাকতাব</text>
+
+    <!-- 'আল হিদায়াহ' (Al Hidayah) -->
+    <text x="300" y="472" 
+          text-anchor="middle" 
+          class="brand-subtitle" 
+          font-size="50" 
+          letter-spacing="2">আল হিদায়াহ</text>
+  </g>
+</svg>

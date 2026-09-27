@@ -1,0 +1,33 @@
+{
+  "siteName": "মাকতাব আল হিদায়াহ",
+  "siteNameEnglish": "Maktab Al Hidayah",
+  "siteNameArabic": "مَكْتَبُ الْهِدَايَةِ",
+  "tagline": "কুরআন ও সহিহ সুন্নাহর আলোকে ইসলামের শিক্ষা",
+  "motto": "আমাদের কথা নয়—দলীলের কথা",
+  "description": "কুরআন ও সহিহ সুন্নাহর আলোকে ইসলামের নির্ভরযোগ্য জ্ঞান, বই, প্রবন্ধ, অডিও, ভিডিও ও রিসোর্স সংকলন প্ল্যাটফর্ম।",
+  "contact": {
+    "email": "contact@maktabalhidayah.org",
+    "phone": "+880 1XXXXXXXXX",
+    "location": "ঢাকা, বাংলাদেশ",
+    "facebook": "https://facebook.com",
+    "youtube": "https://youtube.com",
+    "telegram": "https://t.me"
+  },
+  "navLinks": [
+    { "id": "home", "label": "হোম", "path": "#/" },
+    { "id": "about", "label": "আমাদের সম্পর্কে", "path": "#/about" },
+    { "id": "books", "label": "বই", "path": "#/books" },
+    { "id": "articles", "label": "প্রবন্ধ", "path": "#/articles" },
+    { "id": "audio", "label": "অডিও", "path": "#/audio" },
+    { "id": "videos", "label": "ভিডিও", "path": "#/videos" },
+    { "id": "pamphlets", "label": "পাম্ফলেট", "path": "#/pamphlets" },
+    { "id": "courses", "label": "কোর্স", "path": "#/courses" },
+    { "id": "qna", "label": "প্রশ্নোত্তর", "path": "#/qna" },
+    { "id": "sadqah", "label": "সদকায়ে জারিয়া", "path": "#/sadqah" },
+    { "id": "contact", "label": "যোগাযোগ", "path": "#/contact" }
+  ],
+  "footer": {
+    "aboutText": "মাকতাব আল হিদায়াহ একটি অলাভজনক ও দ্বীনি শিক্ষা ও দাওয়াহ উদ্যোগ। আমাদের লক্ষ্য কুরআন ও সহিহ সুন্নাহর ভিত্তিতে বিশুদ্ধ দ্বীনি জ্ঞান সংরক্ষণ ও প্রচার করা।",
+    "copyright": "© Maktab Al Hidayah. সর্বস্বত্ব সংরক্ষিত।"
+  }
+}
