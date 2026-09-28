@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="bn">
+  <head>
+    <meta charset="utf-8">
+    <title>মাকতাব আল হিদায়াহ | Maktab Al Hidayah</title>
+    <script>
+      // Single Page App redirect for GitHub Pages
+      var path = window.location.pathname;
+      var repo = '/maktab-al-hidayah';
+      if (path.indexOf(repo) === 0) {
+        path = path.slice(repo.length);
+      }
+      var target = repo + '/#' + (path === '/' || path === '' ? '' : path) + window.location.search;
+      window.location.replace(target);
+    </script>
+  </head>
+  <body style="font-family: sans-serif; text-align: center; padding-top: 50px;">
+    <p>লোড হচ্ছে...</p>
+  </body>
+</html>

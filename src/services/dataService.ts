@@ -38,7 +38,9 @@ const cache: DataCache = {
 };
 
 async function fetchJson<T>(filename: string): Promise<T> {
+  const baseUrl = (import.meta.env.BASE_URL || '/').replace(/\/?$/, '/');
   const paths = [
+    `${baseUrl}data/${filename}`,
     `/data/${filename}`,
     `./data/${filename}`,
     `data/${filename}`
