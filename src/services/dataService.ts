@@ -37,6 +37,25 @@ const cache: DataCache = {
   qnas: null,
 };
 
+/**
+ * Resolves an asset path (PDF, audio, image, etc.) relative to Vite's base path,
+ * correctly handling sub-directory hosting like GitHub Pages (e.g. /maktab-al-hidayah/).
+ */
+export function resolveAssetUrl(url?: string): string {
+  if (!url) return '';
+  // If already an absolute web URL (http, https), protocol-relative (//), blob, or data URI, preserve it
+  if (/^(https?:|\/\/|blob:|data:)/i.test(url)) {
+    return url;
+  }
+  const baseUrl = (import.meta.env.BASE_URL || '/').replace(/\/?$/, '/');
+  // Avoid duplicate prefixing if already prefixed with baseUrl
+  if (baseUrl !== '/' && url.startsWith(baseUrl)) {
+    return url;
+  }
+  const cleanPath = url.replace(/^\/+/, '');
+  return `${baseUrl}${cleanPath}`;
+}
+
 async function fetchJson<T>(filename: string): Promise<T> {
   const baseUrl = (import.meta.env.BASE_URL || '/').replace(/\/?$/, '/');
   const paths = [
@@ -67,6 +86,8 @@ export async function getSiteConfig(): Promise<SiteConfig> {
   if (cache.siteConfig) return cache.siteConfig;
   try {
     const data = await fetchJson<SiteConfig>('site.json');
+    if (data.logo) data.logo = resolveAssetUrl(data.logo);
+    if (data.logoFull) data.logoFull = resolveAssetUrl(data.logoFull);
     cache.siteConfig = data;
     return data;
   } catch {
@@ -160,8 +181,12 @@ export async function getBooks(): Promise<BookItem[]> {
   if (cache.books) return cache.books;
   try {
     const data = await fetchJson<BookItem[]>('books.json');
-    cache.books = data;
-    return data;
+    const normalized = data.map((book) => ({
+      ...book,
+      file: book.file ? resolveAssetUrl(book.file) : book.file,
+    }));
+    cache.books = normalized;
+    return normalized;
   } catch {
     return [];
   }
@@ -182,8 +207,12 @@ export async function getPamphlets(): Promise<PamphletItem[]> {
   if (cache.pamphlets) return cache.pamphlets;
   try {
     const data = await fetchJson<PamphletItem[]>('pamphlets.json');
-    cache.pamphlets = data;
-    return data;
+    const normalized = data.map((p) => ({
+      ...p,
+      file: p.file ? resolveAssetUrl(p.file) : p.file,
+    }));
+    cache.pamphlets = normalized;
+    return normalized;
   } catch {
     return [];
   }
@@ -193,8 +222,12 @@ export async function getAudios(): Promise<AudioItem[]> {
   if (cache.audios) return cache.audios;
   try {
     const data = await fetchJson<AudioItem[]>('audios.json');
-    cache.audios = data;
-    return data;
+    const normalized = data.map((a) => ({
+      ...a,
+      audioUrl: a.audioUrl ? resolveAssetUrl(a.audioUrl) : a.audioUrl,
+    }));
+    cache.audios = normalized;
+    return normalized;
   } catch {
     return [];
   }

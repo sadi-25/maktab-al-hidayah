@@ -13,7 +13,8 @@ import {
   getContentById,
   getTopicById,
   extractYouTubeId,
-  getContentByTopic
+  getContentByTopic,
+  resolveAssetUrl
 } from '../services/dataService.ts';
 import { typeConfig } from '../components/ContentCard.tsx';
 import {
@@ -322,7 +323,7 @@ export const ContentDetailPage: React.FC<ContentDetailPageProps> = ({
 
                 {(content as AudioItem).audioUrl && (
                   <a
-                    href={(content as AudioItem).audioUrl}
+                    href={resolveAssetUrl((content as AudioItem).audioUrl)}
                     download
                     className="inline-flex items-center justify-center gap-1.5 text-xs font-semibold text-amber-900 bg-amber-50 hover:bg-amber-100 border border-amber-200 px-3.5 py-2 rounded-lg transition-colors shrink-0"
                   >
@@ -336,7 +337,7 @@ export const ContentDetailPage: React.FC<ContentDetailPageProps> = ({
                 className="w-full h-11 accent-amber-600 focus:outline-none rounded-lg"
                 preload="metadata"
               >
-                <source src={(content as AudioItem).audioUrl} type="audio/mpeg" />
+                <source src={resolveAssetUrl((content as AudioItem).audioUrl)} type="audio/mpeg" />
                 আপনার ব্রাউজার অডিও প্লেয়ার সাপোর্ট করে না।
               </audio>
             </div>
@@ -347,7 +348,7 @@ export const ContentDetailPage: React.FC<ContentDetailPageProps> = ({
             <div className="flex flex-wrap items-center gap-3">
               {(content as BookItem | PamphletItem).file ? (
                 <a
-                  href={(content as BookItem | PamphletItem).file}
+                  href={resolveAssetUrl((content as BookItem | PamphletItem).file)}
                   target="_blank"
                   rel="noreferrer"
                   className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-gradient-to-r from-amber-600 to-amber-700 hover:from-amber-700 hover:to-amber-800 text-white text-sm font-semibold shadow-xs transition-colors"
@@ -359,7 +360,7 @@ export const ContentDetailPage: React.FC<ContentDetailPageProps> = ({
 
               {(content as BookItem | PamphletItem).file ? (
                 <a
-                  href={(content as BookItem | PamphletItem).file}
+                  href={resolveAssetUrl((content as BookItem | PamphletItem).file)}
                   download
                   className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-white hover:bg-gray-100 text-gray-800 border border-gray-300 text-sm font-semibold transition-colors"
                 >

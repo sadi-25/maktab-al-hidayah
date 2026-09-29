@@ -118,6 +118,8 @@ export interface SiteConfig {
   tagline: string;
   motto: string;
   description: string;
+  logo?: string;
+  logoFull?: string;
   contact: {
     email: string;
     phone: string;
