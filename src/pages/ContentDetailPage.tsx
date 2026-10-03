@@ -333,7 +333,9 @@ export const ContentDetailPage: React.FC<ContentDetailPageProps> = ({
                 )}
               </div>
               <audio
+                key={content.id}
                 controls
+                src={resolveAssetUrl((content as AudioItem).audioUrl)}
                 className="w-full h-11 accent-amber-600 focus:outline-none rounded-lg"
                 preload="metadata"
               >
