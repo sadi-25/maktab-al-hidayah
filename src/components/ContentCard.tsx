@@ -134,7 +134,17 @@ export const ContentCard: React.FC<ContentCardProps> = ({
           {person && (
             <span className="flex items-center gap-1">
               <User className="w-3 h-3 text-gray-400" />
-              <span>{person}</span>
+              <span>{item.type === 'book' ? `লেখক: ${person}` : person}</span>
+            </span>
+          )}
+          {'editor' in item && item.editor && (
+            <span className="flex items-center gap-1">
+              <span>সম্পাদনা: {item.editor}</span>
+            </span>
+          )}
+          {'publisher' in item && item.publisher && (
+            <span className="flex items-center gap-1">
+              <span>প্রকাশক: {item.publisher}</span>
             </span>
           )}
           {durationOrPages && (
